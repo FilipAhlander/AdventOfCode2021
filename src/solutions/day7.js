@@ -15,7 +15,7 @@ export const solutionA = () => {
 
 export const solutionB = () => {
   const optimalPosition = Math.round(sum(crabs) / crabs.length);
-  // const optimalPosition = 467; rounding error in my solution lol xD
+  // const optimalPosition = 467; rounding error in my solution lol xD We will never fix this
 
   console.log(optimalPosition);
   const newFuelCost = sum(crabs.map((position) =>
