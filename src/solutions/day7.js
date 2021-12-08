@@ -1,5 +1,7 @@
 import { input } from '../input/day7.js';
+const testData = `16,1,2,0,4,2,7,1,2,14`;
 
+const testCrabs = testData.split(',').map(Number).sort((a, b) => a - b);
 const crabs = input.split(',').map(Number).sort((a, b) => a - b);
 const median = crabs[crabs.length / 2];
 const lowest = crabs[0];
@@ -12,5 +14,11 @@ export const solutionA = () => {
 }
 
 export const solutionB = () => {
-  console.log('B');
+  const optimalPosition = Math.round(sum(crabs) / crabs.length);
+  // const optimalPosition = 467; rounding error in my solution lol xD
+
+  console.log(optimalPosition);
+  const newFuelCost = sum(crabs.map((position) =>
+    (Math.abs(position - optimalPosition) * (1 + Math.abs(position - optimalPosition))) / 2));
+  console.log(newFuelCost);
 }
