@@ -5,6 +5,7 @@ import * as day4 from './solutions/day4.js';
 import * as day5 from './solutions/day5.js';
 import * as day6 from './solutions/day6.js';
 import * as day7 from './solutions/day7.js';
+import * as day8 from './solutions/day8.js';
 
 
 
@@ -25,5 +26,8 @@ import * as day7 from './solutions/day7.js';
 // day6.solutionA();
 // day6.solutionB();
 
-day7.solutionA();
-day7.solutionB();
+// day7.solutionA();
+// day7.solutionB();
+
+// day8.solutionA();
+day8.solutionB();
