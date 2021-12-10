@@ -45,20 +45,19 @@ export const solutionB = () => {
   // Length 6: 6, 9, 0
   matches[6] = line.signalPattern.find((word) => word.length === 6 && !includes(word, matches[1]));
   matches[9] = line.signalPattern.find((word) => word.length === 6 && includes(word, matches[4]));
-  matches[0] = line.signalPattern.find((word) => word.length === 6 && word !== matches[9]);
+  matches[0] = line.signalPattern.find((word) => word.length === 6 && word !== matches[9] && word !== matches[6]);
 
   // Length 5: 3, 5, 2
   matches[3] = line.signalPattern.find((word) => word.length === 5 && includes(word, matches[1]));
   matches[5] = line.signalPattern.find((word) => word.length === 5 && word !== matches[3] && includes(matches[6], word));
   matches[2] = line.signalPattern.find((word) => word.length === 5 && word !== matches[3] && word !== matches[5]);
-  
+
   const translator = Object.fromEntries(
     Object.entries(matches).map((x) => x.reverse())
   );
   // console.log(translator);
-
   const translation = Number(line.outputValue.map((word) => translator[word]).join(''));
-  console.log(translation);
+  // console.log(translation);
   
   amount += translation;
   }

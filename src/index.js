@@ -7,8 +7,6 @@ import * as day6 from './solutions/day6.js';
 import * as day7 from './solutions/day7.js';
 import * as day8 from './solutions/day8.js';
 
-
-
 // day1.solutionA();
 // day1.solutionB();
 
@@ -30,4 +28,4 @@ import * as day8 from './solutions/day8.js';
 // day7.solutionB();
 
 // day8.solutionA();
-day8.solutionB();
+// day8.solutionB();
