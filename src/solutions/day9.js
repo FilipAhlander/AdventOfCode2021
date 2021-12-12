@@ -75,5 +75,5 @@ export const solutionB = () => {
     basins.push(basin);
   })
   basins.sort((a, b) => b - a);
-  console.log(basins[0] * basins[1] * basins [2]);
+  console.log(basins[0] * basins[1] * basins[2]);
 }
