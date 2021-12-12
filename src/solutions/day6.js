@@ -4,6 +4,7 @@ const fishes = input.split(',').map(Number);
 
 export const solutionA = () => {
   const queue = Array(9).fill(0);
+  [0,0,0,0,0,0,0,0,0]
   for (const fish of fishes) {
     queue[fish]++;
   }
